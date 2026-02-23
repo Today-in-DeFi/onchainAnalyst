@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DeFi Weekly Market Overview — Feb 23, 2026</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#0d1117;color:#c9d1d9;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;line-height:1.6;font-size:15px}
+  a{color:#58a6ff;text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  /* Nav */
+  nav{position:sticky;top:0;z-index:100;background:#161b22;border-bottom:1px solid #30363d;padding:10px 0;backdrop-filter:blur(8px)}
+  nav .inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:8px;padding:0 20px;flex-wrap:wrap}
+  nav .brand{font-weight:700;font-size:16px;color:#f0f6fc;margin-right:12px;white-space:nowrap}
+  nav a{font-size:13px;padding:5px 12px;border-radius:6px;color:#8b949e;transition:all .15s}
+  nav a:hover{background:#21262d;color:#f0f6fc;text-decoration:none}
+  nav .date{margin-left:auto;font-size:12px;color:#484f58}
+
+  .container{max-width:1100px;margin:0 auto;padding:24px 20px 60px}
+
+  /* Header */
+  .header{text-align:center;padding:40px 0 32px}
+  .header h1{font-size:clamp(24px,4vw,36px);color:#f0f6fc;margin-bottom:6px}
+  .header .sub{font-size:14px;color:#8b949e}
+
+  /* Summary cards */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-bottom:36px}
+  .card{background:#161b22;border:1px solid #30363d;border-radius:12px;padding:20px 24px;text-align:center}
+  .card .label{font-size:12px;text-transform:uppercase;letter-spacing:.8px;color:#8b949e;margin-bottom:6px}
+  .card .value{font-size:28px;font-weight:700;color:#f0f6fc}
+  .card .delta{font-size:14px;margin-top:4px;font-weight:600}
+  .card .delta.pos{color:#3fb950}
+  .card .delta.neg{color:#f85149}
+  .card .delta.neutral{color:#d29922}
+
+  /* Sections */
+  .section{margin-bottom:40px}
+  .section h2{font-size:22px;color:#f0f6fc;border-bottom:1px solid #21262d;padding-bottom:8px;margin-bottom:16px}
+  .section h3{font-size:17px;color:#e6edf3;margin:24px 0 12px}
+
+  /* Tables */
+  .table-wrap{overflow-x:auto;margin-bottom:20px;border-radius:8px;border:1px solid #30363d}
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  thead{background:#161b22}
+  th{padding:10px 14px;text-align:left;font-weight:600;color:#8b949e;font-size:12px;text-transform:uppercase;letter-spacing:.5px;border-bottom:2px solid #30363d}
+  th.r{text-align:right}
+  td{padding:10px 14px;border-bottom:1px solid #21262d}
+  td.r{text-align:right;font-variant-numeric:tabular-nums}
+  tr:last-child td{border-bottom:none}
+  tr:hover{background:#161b22}
+  .pos{color:#3fb950}
+  .neg{color:#f85149}
+  .bold{font-weight:700}
+  .muted{color:#8b949e}
+
+  /* Commentary */
+  .commentary{background:#161b22;border-left:3px solid #58a6ff;border-radius:0 8px 8px 0;padding:16px 20px;margin:20px 0;font-size:14px;color:#c9d1d9}
+  .commentary p{margin-bottom:8px}
+  .commentary p:last-child{margin-bottom:0}
+  .commentary strong{color:#f0f6fc}
+  .commentary ul{margin:6px 0 6px 20px}
+  .commentary li{margin-bottom:4px}
+
+  /* Narrative list */
+  .narratives{list-style:none;counter-reset:narr}
+  .narratives li{counter-increment:narr;padding:14px 18px;background:#161b22;border:1px solid #30363d;border-radius:8px;margin-bottom:10px;position:relative;padding-left:48px}
+  .narratives li::before{content:counter(narr);position:absolute;left:16px;top:14px;font-weight:700;font-size:15px;color:#58a6ff}
+  .narratives li strong{color:#f0f6fc}
+
+  /* Pill tags */
+  .tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:12px;font-weight:600;margin-left:4px}
+  .tag.green{background:rgba(63,185,80,.15);color:#3fb950}
+  .tag.red{background:rgba(248,81,73,.15);color:#f85149}
+  .tag.blue{background:rgba(88,166,255,.15);color:#58a6ff}
+
+  /* Footer */
+  .footer{text-align:center;padding:40px 0 20px;color:#484f58;font-size:12px;border-top:1px solid #21262d}
+
+  /* Responsive */
+  @media(max-width:600px){
+    .cards{grid-template-columns:1fr 1fr}
+    .card .value{font-size:22px}
+    th,td{padding:8px 10px;font-size:13px}
+    .header{padding:24px 0 20px}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="inner">
+    <span class="brand">DeFi Weekly</span>
+    <a href="#stablecoins">Stablecoins</a>
+    <a href="#chains">Chains</a>
+    <a href="#protocols">Protocols</a>
+    <a href="#summary">Summary</a>
+    <span class="date">Feb 23, 2026</span>
+  </div>
+</nav>
+
+<div class="container">
+
+<!-- Header -->
+<div class="header">
+  <h1>DeFi Weekly Market Overview</h1>
+  <p class="sub">Data: DefiLlama &nbsp;|&nbsp; Period: 7-day trailing &nbsp;|&nbsp; Feb 23, 2026</p>
+</div>
+
+<!-- Summary Cards -->
+<div class="cards">
+  <div class="card">
+    <div class="label">Stablecoin Supply</div>
+    <div class="value">$307.5B</div>
+    <div class="delta pos">+$940M (+0.31%)</div>
+  </div>
+  <div class="card">
+    <div class="label">Total DEX Volume (7d)</div>
+    <div class="value">$37.3B</div>
+    <div class="delta neg">~-25% WoW</div>
+  </div>
+  <div class="card">
+    <div class="label">Ethereum TVL</div>
+    <div class="value">$59.0B</div>
+    <div class="delta neutral">-0.10% (flat)</div>
+  </div>
+  <div class="card">
+    <div class="label">Market Sentiment</div>
+    <div class="value" style="font-size:20px">Risk-Off</div>
+    <div class="delta neg">Broad de-risking</div>
+  </div>
+</div>
+
+<!-- ============ STABLECOINS ============ -->
+<div class="section" id="stablecoins">
+  <h2>1. Stablecoin Supply</h2>
+
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>Stablecoin</th><th class="r">Current</th><th class="r">7d Change</th><th class="r">7d %</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="bold">USDT</td><td class="r">$183.6B</td><td class="r neg bold">-$154M</td><td class="r neg">-0.08%</td></tr>
+      <tr><td class="bold">USDC</td><td class="r">$74.5B</td><td class="r pos bold">+$801M</td><td class="r pos">+1.09%</td></tr>
+      <tr><td>USDS (Sky)</td><td class="r">$7.2B</td><td class="r pos">+$492M</td><td class="r pos">+7.38%</td></tr>
+      <tr><td>USDe (Ethena)</td><td class="r">$6.1B</td><td class="r neg">-$158M</td><td class="r neg">-2.52%</td></tr>
+      <tr><td>USD1 (WLFI)</td><td class="r">$5.0B</td><td class="r neg">-$269M</td><td class="r neg">-5.08%</td></tr>
+      <tr><td>DAI</td><td class="r">$4.4B</td><td class="r pos">+$14M</td><td class="r pos">+0.31%</td></tr>
+      <tr><td>PYUSD</td><td class="r">$4.1B</td><td class="r pos">+$28M</td><td class="r pos">+0.70%</td></tr>
+      <tr><td>BUIDL (BlackRock)</td><td class="r">$2.5B</td><td class="r pos">+$100M</td><td class="r pos">+4.22%</td></tr>
+      <tr><td>USYC</td><td class="r">$1.7B</td><td class="r pos">+$94M</td><td class="r pos">+5.93%</td></tr>
+      <tr><td>USDf (Falcon)</td><td class="r">$1.6B</td><td class="r muted">-$1M</td><td class="r muted">-0.07%</td></tr>
+      <tr><td>RLUSD (Ripple)</td><td class="r">$1.6B</td><td class="r pos">+$37M</td><td class="r pos">+2.41%</td></tr>
+      <tr><td>USDG (Global Dollar)</td><td class="r">$1.5B</td><td class="r pos">+$55M</td><td class="r pos">+3.74%</td></tr>
+      <tr><td>YLDS</td><td class="r">$620M</td><td class="r pos bold">+$156M</td><td class="r pos bold">+33.65%</td></tr>
+      <tr><td>USDD</td><td class="r">$1.1B</td><td class="r pos">+$78M</td><td class="r pos">+7.46%</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="commentary">
+    <p><strong>Net $940M expansion breakdown:</strong></p>
+    <ul>
+      <li><strong>USDC: +$801M</strong> <span class="tag green">Dominant Driver</span> — nearly all net new issuance</li>
+      <li><strong>Major Alts: +$467M</strong> — USDS (+492M) leading the alt stable surge, BUIDL +100M, USYC +94M, USDD +78M</li>
+      <li><strong>USDT: -$154M</strong> <span class="tag red">Redemptions</span> — first meaningful decline in weeks</li>
+      <li><strong>Long Tail: -$173M</strong> — M by M0 (-$160M), USDai (-$94M), USD1 (-$269M) notable outflows</li>
+    </ul>
+  </div>
+
+  <div class="commentary">
+    <p><strong>Key Takeaways:</strong></p>
+    <ul>
+      <li><strong>USDC is eating USDT's lunch</strong> — nearly $1B in net USDC minting vs USDT contraction</li>
+      <li><strong>Institutional/RWA stables</strong> (BUIDL, USYC, YLDS) continue steady growth — the TradFi pipeline is active</li>
+      <li><strong>USDS (Sky/Maker rebrand)</strong> surging +7.4% — migrating DAI supply + new demand</li>
+      <li><strong>USD1 (World Liberty Financial)</strong> giving back $269M after recent rapid expansion</li>
+      <li><strong>Ethena USDe</strong> contracting -2.5% as basis trade yields compress</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============ CHAINS ============ -->
+<div class="section" id="chains">
+  <h2>2. Chain Analysis</h2>
+
+  <h3>2A. Chain TVL</h3>
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>Chain</th><th class="r">TVL</th><th class="r">7d Change</th><th class="r">7d %</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="bold">Ethereum</td><td class="r">$59.0B</td><td class="r muted">-$59M</td><td class="r muted">-0.10%</td></tr>
+      <tr><td>Solana</td><td class="r">$6.3B</td><td class="r neg">-$641M</td><td class="r neg">-9.23%</td></tr>
+      <tr><td>BSC</td><td class="r">$5.6B</td><td class="r muted">~flat</td><td class="r muted">0.00%</td></tr>
+      <tr><td>Bitcoin</td><td class="r">$4.4B</td><td class="r neg bold">-$3.1B</td><td class="r neg bold">-41.1%</td></tr>
+      <tr><td>Tron</td><td class="r">$4.1B</td><td class="r neg">-$43M</td><td class="r neg">-1.05%</td></tr>
+      <tr><td>Base</td><td class="r">$3.8B</td><td class="r neg">-$195M</td><td class="r neg">-4.92%</td></tr>
+      <tr><td>Plasma</td><td class="r">$2.4B</td><td class="r neg">-$227M</td><td class="r neg">-8.77%</td></tr>
+      <tr><td>Arbitrum</td><td class="r">$2.0B</td><td class="r neg">-$170M</td><td class="r neg">-7.84%</td></tr>
+      <tr><td>Provenance</td><td class="r">$1.6B</td><td class="r pos bold">+$376M</td><td class="r pos bold">+31.6%</td></tr>
+      <tr><td>Hyperliquid L1</td><td class="r">$1.5B</td><td class="r neg">-$129M</td><td class="r neg">-8.02%</td></tr>
+      <tr><td>Polygon</td><td class="r">$1.1B</td><td class="r pos">+$46M</td><td class="r pos">+4.30%</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="commentary">
+    <p><strong>Top Growers (&gt;$200M TVL):</strong></p>
+    <ul>
+      <li><strong>Provenance +31.6%</strong> (+$376M) — Figure Markets exchange growth driving this</li>
+      <li><strong>Aptos +5.8%</strong> (+$15M)</li>
+      <li><strong>Polygon +4.3%</strong> (+$46M)</li>
+      <li><strong>Monad +3.8%</strong> (+$8M) — early-stage chain building TVL</li>
+      <li><strong>Berachain +99%</strong> ($126M) — new chain rapid bootstrapping</li>
+    </ul>
+    <p style="margin-top:12px"><strong>Key Takeaways:</strong></p>
+    <ul>
+      <li><strong>Ethereum is the safe haven</strong> — essentially flat while everything else bleeds. $59B TVL barely budged</li>
+      <li><strong>Bitcoin DeFi in sharp retreat</strong> — the -41% is almost entirely Babylon Protocol restaking outflows (-$743M)</li>
+      <li><strong>Solana hurting</strong> — -9.2% TVL decline = SOL price decline + some genuine outflows</li>
+      <li><strong>L2s mixed</strong> — Base, Arbitrum, Hyperliquid all down 5-8%; only OP Mainnet held flat</li>
+      <li><strong>Provenance</strong> is an outlier driven by Figure Markets (institutional/RWA chain)</li>
+    </ul>
+  </div>
+
+  <h3>2B. DEX Volume (7-day)</h3>
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>Chain</th><th class="r">7d Volume</th><th class="r">Prev 7d</th><th class="r">WoW</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="bold">Solana</td><td class="r">$14.0B</td><td class="r">$21.1B</td><td class="r neg">-33.5%</td></tr>
+      <tr><td class="bold">Ethereum</td><td class="r">$10.1B</td><td class="r">$11.8B</td><td class="r neg">-14.7%</td></tr>
+      <tr><td>BSC</td><td class="r">$6.4B</td><td class="r">$8.6B</td><td class="r neg">-25.3%</td></tr>
+      <tr><td>Base</td><td class="r">$2.5B</td><td class="r">$4.0B</td><td class="r neg">-37.5%</td></tr>
+      <tr><td>Arbitrum</td><td class="r">$1.3B</td><td class="r">$1.6B</td><td class="r neg">-18.8%</td></tr>
+      <tr><td>Hyperliquid L1</td><td class="r">$1.1B</td><td class="r">$1.8B</td><td class="r neg">-41.1%</td></tr>
+      <tr><td>Polygon</td><td class="r">$903M</td><td class="r">$892M</td><td class="r pos">+1.2%</td></tr>
+      <tr><td>Avalanche</td><td class="r">$612M</td><td class="r">$694M</td><td class="r neg">-11.8%</td></tr>
+      <tr><td>Sui</td><td class="r">$404M</td><td class="r">$654M</td><td class="r neg">-38.3%</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="commentary">
+    <ul>
+      <li><strong>Volume down across the board</strong> — broad risk-off / lower volatility week</li>
+      <li>Solana still dominates DEX volume ($14B) but lost a third of throughput WoW</li>
+      <li>Base and Sui took the biggest hits (-37% to -38%) — memecoin/speculative activity cooling</li>
+      <li>Hyperliquid -41% — perps volume normalizing after recent spikes</li>
+      <li>Polygon and Avalanche relatively resilient, nearly flat</li>
+    </ul>
+  </div>
+
+  <h3>2C. Chain Stablecoin Flows</h3>
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>Chain</th><th class="r">Stable Supply</th><th class="r">7d Change</th><th class="r">7d %</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="bold">Ethereum</td><td class="r">$159.3B</td><td class="r pos bold">+$758M</td><td class="r pos">+0.48%</td></tr>
+      <tr><td>Tron</td><td class="r">$85.6B</td><td class="r neg">-$20M</td><td class="r neg">-0.02%</td></tr>
+      <tr><td>BSC</td><td class="r">$16.2B</td><td class="r neg">-$52M</td><td class="r neg">-0.32%</td></tr>
+      <tr><td>Solana</td><td class="r">$15.5B</td><td class="r pos bold">+$250M</td><td class="r pos">+1.64%</td></tr>
+      <tr><td>Base</td><td class="r">$4.6B</td><td class="r pos">+$44M</td><td class="r pos">+0.98%</td></tr>
+      <tr><td>Hyperliquid L1</td><td class="r">$4.5B</td><td class="r pos">+$42M</td><td class="r pos">+0.96%</td></tr>
+      <tr><td>Arbitrum</td><td class="r">$4.3B</td><td class="r neg bold">-$127M</td><td class="r neg">-2.90%</td></tr>
+      <tr><td>Polygon</td><td class="r">$3.2B</td><td class="r pos">+$19M</td><td class="r pos">+0.59%</td></tr>
+      <tr><td>Provenance</td><td class="r">$279M</td><td class="r pos">+$70M</td><td class="r pos bold">+33.7%</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="commentary">
+    <ul>
+      <li><strong>Ethereum is the destination</strong> — +$758M of net stablecoin inflows, absorbing the majority of new USDC minting</li>
+      <li><strong>Solana attracting stables</strong> (+$250M) even as TVL drops — stables bridging in for future deployment or as a safe harbor</li>
+      <li><strong>Arbitrum bleeding</strong> — -$127M stablecoin outflows is concerning, aligns with TVL decline</li>
+      <li><strong>BSC quietly leaking</strong> stables despite flat TVL — potential risk signal</li>
+      <li><strong>Hyperliquid</strong> continuing to build stablecoin base (+$42M) for its perps ecosystem</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============ PROTOCOLS ============ -->
+<div class="section" id="protocols">
+  <h2>3. Protocol TVL — Biggest Movers (&gt;=$50M TVL)</h2>
+
+  <h3>Top Gainers (by %)</h3>
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>Protocol</th><th>Category</th><th>Chain</th><th class="r">TVL</th><th class="r">7d %</th><th class="r">7d $ Chg</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="bold">Uniswap V4</td><td>DEX</td><td>Multi (15)</td><td class="r">$6.2B</td><td class="r pos bold">+875%</td><td class="r pos bold">+$5.6B</td></tr>
+      <tr><td>Frankencoin</td><td>CDP</td><td>Ethereum</td><td class="r">$63M</td><td class="r pos">+82%</td><td class="r pos">+$29M</td></tr>
+      <tr><td>Synthetix V3</td><td>Derivatives</td><td>Multi (3)</td><td class="r">$58M</td><td class="r pos">+42%</td><td class="r pos">+$17M</td></tr>
+      <tr><td>Reservoir Protocol</td><td>CDP</td><td>Multi (7)</td><td class="r">$78M</td><td class="r pos">+37%</td><td class="r pos">+$21M</td></tr>
+      <tr><td>Varlamore Capital</td><td>Risk Curators</td><td>Multi (4)</td><td class="r">$144M</td><td class="r pos">+36%</td><td class="r pos">+$38M</td></tr>
+      <tr><td>Dolomite</td><td>Lending</td><td>Multi (7)</td><td class="r">$277M</td><td class="r pos">+34%</td><td class="r pos">+$69M</td></tr>
+      <tr><td>Figure Markets Exchange</td><td>OTC</td><td>Provenance</td><td class="r">$1.6B</td><td class="r pos">+32%</td><td class="r pos">+$376M</td></tr>
+      <tr><td>Infrared Finance</td><td>Liquid Staking</td><td>Berachain</td><td class="r">$106M</td><td class="r pos">+26%</td><td class="r pos">+$22M</td></tr>
+      <tr><td>Hastra</td><td>RWA</td><td>Solana</td><td class="r">$339M</td><td class="r pos">+14%</td><td class="r pos">+$42M</td></tr>
+      <tr><td>USDD</td><td>CDP</td><td>Multi (3)</td><td class="r">$688M</td><td class="r pos">+14%</td><td class="r pos">+$85M</td></tr>
+      <tr><td>Solstice USX</td><td>Basis Trading</td><td>Solana</td><td class="r">$341M</td><td class="r pos">+8%</td><td class="r pos">+$26M</td></tr>
+      <tr><td>Polymarket</td><td>Prediction</td><td>Polygon</td><td class="r">$380M</td><td class="r pos">+8%</td><td class="r pos">+$27M</td></tr>
+      <tr><td>MEV Capital</td><td>Risk Curators</td><td>Multi (11)</td><td class="r">$325M</td><td class="r pos">+7%</td><td class="r pos">+$22M</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Top Losers (by %)</h3>
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>Protocol</th><th>Category</th><th>Chain</th><th class="r">TVL</th><th class="r">7d %</th><th class="r">7d $ Chg</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="bold">Resolv</td><td>Basis Trading</td><td>Ethereum</td><td class="r">$133M</td><td class="r neg bold">-44%</td><td class="r neg">-$104M</td></tr>
+      <tr><td>Marinade Select</td><td>Staking</td><td>Solana</td><td class="r">$118M</td><td class="r neg">-28%</td><td class="r neg">-$46M</td></tr>
+      <tr><td>ether.fi Liquid</td><td>Capital Allocator</td><td>Ethereum</td><td class="r">$343M</td><td class="r neg">-24%</td><td class="r neg">-$108M</td></tr>
+      <tr><td>M0</td><td>Stablecoin Issuer</td><td>Ethereum</td><td class="r">$431M</td><td class="r neg">-22%</td><td class="r neg">-$124M</td></tr>
+      <tr><td>Babylon Protocol</td><td>Restaking</td><td>Bitcoin</td><td class="r">$3.3B</td><td class="r neg">-18%</td><td class="r neg bold">-$743M</td></tr>
+      <tr><td>USD AI</td><td>RWA Lending</td><td>Arbitrum</td><td class="r">$477M</td><td class="r neg">-16%</td><td class="r neg">-$94M</td></tr>
+      <tr><td>cap</td><td>Lending</td><td>Ethereum</td><td class="r">$177M</td><td class="r neg">-16%</td><td class="r neg">-$35M</td></tr>
+      <tr><td>Veda</td><td>Capital Allocator</td><td>Multi (10)</td><td class="r">$963M</td><td class="r neg">-15%</td><td class="r neg">-$175M</td></tr>
+      <tr><td>Meteora DLMM</td><td>DEX</td><td>Solana</td><td class="r">$281M</td><td class="r neg">-14%</td><td class="r neg">-$47M</td></tr>
+      <tr><td>Jito Liquid Staking</td><td>Liquid Staking</td><td>Solana</td><td class="r">$977M</td><td class="r neg">-12%</td><td class="r neg">-$134M</td></tr>
+      <tr><td>Fluid Lending</td><td>Lending</td><td>Multi (5)</td><td class="r">$1.0B</td><td class="r neg">-12%</td><td class="r neg">-$142M</td></tr>
+      <tr><td>Pendle</td><td>Yield</td><td>Multi</td><td class="r">$2.3B</td><td class="r neg">-10%</td><td class="r neg">-$255M</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="commentary">
+    <p><strong>Biggest Absolute $ Changes:</strong></p>
+    <p><span class="tag green">Gainers</span> Uniswap V4 (+$5.6B), Binance CEX (+$2.4B), Figure Markets (+$376M), BlackRock BUIDL (+$100M), Spark Liquidity Layer (+$96M), USDD (+$85M), Spark Savings (+$84M)</p>
+    <p><span class="tag red">Losers</span> Aave V3 (-$984M), Lido (-$859M), Babylon (-$743M), EigenCloud (-$477M), ether.fi Stake (-$373M), Morpho V1 (-$275M), Pendle (-$255M)</p>
+  </div>
+</div>
+
+<!-- ============ SUMMARY ============ -->
+<div class="section" id="summary">
+  <h2>Summary &amp; Key Narratives</h2>
+
+  <ol class="narratives">
+    <li><strong>Risk-off week</strong> — Broad TVL declines, volume down 20-40% across chains. This is a de-risking week.</li>
+    <li><strong>USDC dominance over USDT</strong> — USDC minted +$801M while USDT saw -$154M in redemptions. The USDC/USDT ratio continues to shift. Institutional preference for USDC is strengthening.</li>
+    <li><strong>Ethereum as safe haven</strong> — Nearly flat TVL (-0.1%) while every other major chain bled 5-10%+. $758M of stablecoin inflows confirm capital is consolidating on Ethereum.</li>
+    <li><strong>Uniswap V4 migration is THE story</strong> — $5.6B of TVL migrated to V4 in one week. This is liquidity moving from V3 &rarr; V4, not new capital. But it signals V4 is now the standard.</li>
+    <li><strong>Bitcoin DeFi retreat</strong> — Babylon Protocol losing $743M (-18.5%) is the biggest single-protocol outflow. The BTC restaking thesis is being stress-tested.</li>
+    <li><strong>Solana paradox</strong> — TVL down 9.2% but stablecoins up +$250M. SOL price decline drives TVL down, but stablecoin inflows suggest dry powder is being positioned.</li>
+    <li><strong>Lending/restaking rotation out</strong> — Aave V3 (-$984M), Lido (-$859M), EigenCloud (-$477M), ether.fi (-$373M), Morpho (-$275M). Blue-chip DeFi protocols seeing meaningful outflows.</li>
+    <li><strong>RWA/institutional rails growing</strong> — BlackRock BUIDL (+$100M), USYC (+$94M), YLDS (+$156M), Figure Markets (+$376M). The institutional pipeline keeps building regardless of market conditions.</li>
+    <li><strong>Basis trade unwind</strong> — Resolv (-44%), Ethena USDe contraction (-2.5%). Funding rates compressing = basis trade less attractive.</li>
+  </ol>
+</div>
+
+</div>
+
+<div class="footer">
+  Generated from DefiLlama data &nbsp;|&nbsp; Feb 23, 2026 &nbsp;|&nbsp; today-in-defi/onchainAnalyst
+</div>
+
+</body>
+</html>
