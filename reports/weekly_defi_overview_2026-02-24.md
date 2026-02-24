@@ -64,9 +64,9 @@ Barely positive net issuance — a dramatic slowdown from last week's +$940M. Th
 | Mantle | $544M | **+$288M** | +112.50% |
 
 **Top Growers (>$200M TVL):**
-1. **Mantle +112.5%** (+$288M) — massive week, Mantle Bridge inflows (+$22M) driving this alongside MNT price action
+1. **Mantle +112.5%** (+$288M) — the headline number is eye-popping, but it's a subsidy story. Aave V3 launched on Mantle Feb 11 with an **8M MNT + 1.5M GHO incentive program** (6-month), and Aave alone now accounts for ~$454M supplied (~40% of ecosystem TVL). Bybit's Mantle Vault ($150M+ AUM) is funneling CEX users directly on-chain. Stablecoin flows confirm real capital: **+$240M in stables (+44.6%)** — this isn't just price action
 2. **Provenance +27.8%** (+$330M) — Figure Markets Exchange growth continues, institutional RWA chain
-3. **Berachain +30.9%** ($123M) — still bootstrapping, Infrared Finance +24% leading the charge
+3. **Berachain +30.9%** ($123M) — but stablecoin flows tell a different story: **stables actually declined -$7.4M (-6.3%)** on the week. The TVL growth is almost entirely BERA's 150% price rally (Feb 11 short squeeze) inflating deposited asset values. Infrared Finance (+24%) and Kodiak Islands (+14%) are the main protocols, benefiting from fresh IR token staking yields and newly unlocked BERA flowing into PoL vaults
 4. **dYdX +1.1%** — one of very few chains to avoid red this week
 
 **Biggest Decliners:**
@@ -82,7 +82,8 @@ Barely positive net issuance — a dramatic slowdown from last week's +$940M. Th
 - **Everything is red** — this is the most uniformly bearish chain TVL picture in weeks. Only Mantle, Provenance, and Berachain are green
 - **Bitcoin DeFi continues to unwind** — Babylon now down -22% in a single week after -18.5% last week. Cumulative destruction is massive
 - **Tron is the relative safe haven** — only -2.15%, the least damaged major chain. Stablecoin settlement infrastructure holds steady
-- **Mantle's explosion** needs context — +112% is likely a combination of bridge inflows and MNT price appreciation, not necessarily organic DeFi growth
+- **Mantle's explosion is subsidy-driven** — Aave V3's 8M MNT incentive program (launched Feb 11) is the engine, with Bybit's Mantle Vault funneling CEX users on-chain. Stablecoin inflows (+$240M) confirm real capital, but it's mercenary — sustainability depends on what happens when incentives expire (~Aug 2026)
+- **Berachain's growth is price-driven** — stablecoin supply actually *fell* -6.3% while TVL rose +31%. BERA's 150% rally (Feb 11) is doing all the work. The Feb 6 token unlock (63.75M BERA) cleared without selling, and the "Bera Builds Businesses" strategic pivot boosted sentiment, but new capital is not yet arriving
 
 ### 2B. DEX Volume (7-day)
 
@@ -119,9 +120,11 @@ Barely positive net issuance — a dramatic slowdown from last week's +$940M. Th
 | Polygon | $3.3B | +$58M | +1.82% |
 | Aptos | $1.8B | -$106M | -5.54% |
 | Avalanche | $1.7B | **-$180M** | -9.52% |
+| Mantle | $779M | **+$240M** | +44.6% |
 | Provenance | $270M | +$105M | +63.6% |
+| Berachain | $112M | -$7M | -6.3% |
 
-**Biggest Inflows:** Tron (+$951M), Solana (+$220M), Provenance (+$105M), Polygon (+$58M), Base (+$49M)
+**Biggest Inflows:** Tron (+$951M), Mantle (+$240M), Solana (+$220M), Provenance (+$105M), Polygon (+$58M), Base (+$49M)
 
 **Biggest Outflows:** Arbitrum (-$296M), Ethereum (-$270M), Avalanche (-$180M), BSC (-$158M), Aptos (-$106M)
 
@@ -130,7 +133,9 @@ Barely positive net issuance — a dramatic slowdown from last week's +$940M. Th
 - **Ethereum lost its magnet** — -$270M stablecoin outflows vs +$758M last week. This is a complete reversal. Capital is rotating out
 - **Arbitrum bleeding accelerates** — -$296M (-6.3%) vs -$127M last week. This is concerning — two consecutive weeks of heavy outflows
 - **Avalanche stablecoin collapse** — -$180M (-9.5%) is the highest percentage decline. Capital flight
+- **Mantle is the stealth winner** — +$240M in stablecoin inflows (+44.6%), almost all driven by Aave V3's incentive program and Bybit's Mantle Vault pipeline. This is the Bybit-to-DeFi funnel in action
 - **Solana still attracting stables** (+$220M) even with TVL down — dry powder thesis from last week remains intact
+- **Berachain stables declining** despite +31% TVL growth — -$7M (-6.3%) confirms the TVL number is BERA price appreciation, not new capital
 
 ---
 
@@ -203,4 +208,6 @@ Barely positive net issuance — a dramatic slowdown from last week's +$940M. Th
 
 8. **Arbitrum's slow bleed worsens** — -$296M stablecoin outflows (-6.3%), -$171M TVL decline (-8%), DEX volume -23%. Every metric is deteriorating for the leading L2. This is now a two-week trend that bears watching.
 
-9. **Berachain and Provenance are the bright spots** — Berachain (+31%, Infrared +24%, Kodiak +14%) is the rare new chain building genuine traction in a down market. Provenance (+28%, Figure Markets) continues its institutional RWA trajectory. Both are swimming against a very strong current, which makes the growth more meaningful.
+9. **Mantle's subsidy flywheel is working — for now** — +112% TVL backed by +$240M in real stablecoin inflows. The playbook: Aave V3 launches with 8M MNT + 1.5M GHO in incentives, Bybit's Mantle Vault funnels CEX users on-chain, and USDT0 migration provides clean rails. It's mercenary capital chasing yield, but at least it's real capital. The test comes when the 6-month incentive program expires (~August 2026).
+
+10. **Berachain's growth is a mirage — for now** — +31% TVL looks impressive until you check stablecoin flows: -$7.4M (-6.3%). The entire move is BERA's 150% price rally (Feb 11 short squeeze after the 63.75M token unlock cleared). The "Bera Builds Businesses" strategic pivot and fresh Infrared staking yields are genuine catalysts, but new capital hasn't arrived yet. Watch whether stablecoin flows turn positive in coming weeks to confirm the narrative.
